@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+\usepackage{fancyhdr, graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+	\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=15mm,
+	right=15mm}
+
+
+%------------------------------------------------
+% to generate automatic open-close quotes
+\newif\ifquoteopen
+\catcode`\"=\active % lets you define `"` as a macro
+\DeclareRobustCommand*{"}{%
+   \ifquoteopen
+     \quoteopenfalse ''%
+   \else
+     \quoteopentrue ``%
+   \fi
+}
+%------------------------------------------------
+
+% signatures
+\usepackage{calc}
+%\newcommand{\sigline}[1]{\makebox[\widthof{#1~}]{.\dotfill}\\#1}
+
+
+\def\sig#1{\vbox{\hsize=5.5cm
+		\kern2cm\hrule\kern1ex
+		\hbox to \hsize{\strut\hfil #1 \hfil}}}
+
+
+
+
+%\usepackage{titling}
+%\setlength{\droptitle}{0pt}
+
+\renewcommand{\headrulewidth}{1pt}
+
+\headheight = 16pt
+
+
+
+\lhead{
+	\includegraphics[width=4cm]{index.png} \\
+}
+
+\rhead{
+	\scriptsize{ 
+		Av. Juan B. Justo 4302 \\
+		B7608FDQ - Mar del Plata \\
+		Buenos Aires - Argentina \\
+		Tel: +54 223 481-6600 (int 235) \\
+		Fax: +54 223 481-0046 \\
+		E-Mail: posgrado@fi.mdp.edu.ar \\
+		www3.fi.mdp.edu.ar/posmat \\
+	}
+}
+
+% esto agrega el header a todas las paginas pero falla. Se superpone el header con el 
+% documento
+%\fancypagestyle{plain}{\pagestyle{fancy}} 
+\pagestyle{plain}
+
+\title{\textbf{Informe anual 2016} \vspace{-3ex} } % \vspace deletes blank lines between title and items
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{itemize}
+	\item \textbf{Nombre y Apellido:} Nicolás Biocca
+	
+	\item \textbf{Carrera:} Doctorado en Ingeniería, orientación Mecánica.
+	
+	\item \textbf{Título de Tesis:} Desarrollo de modelos de interacción fluido-estructura enfocados al estudio de válvulas cardíacas.
+	
+	\item \textbf{Director de Tesis:} Dr. Santiago A. Urquiza 
+	
+	\item \textbf{Codirector de Tesis:} Dr. Guillermo Lombera
+	
+	\item \textbf{Comisión de seguimiento} 
+		\subitem Dr. Diego Santigo
+		\subitem Dr. Pablo J. Blanco
+		\subitem Dr. Alejandro Clausse
+	
+	\item \textbf{Cursos realizados}
+		\begin{center}
+			\begin{tabular}{ | p{7cm} | c | c |c |}
+				\hline
+				\textbf{\qquad \qquad  \qquad Curso} & \textbf{Fecha} & \textbf{Calificación} & \textbf{UVACs} \\ \hline 
+				Mecánica del Sólido Computacional & 1er semestre 2016 & 10 & 4 \\ \hline
+				Formulaciones Variacionales Avanzadas en el Modelado de Medios Continuos & 1er semestre 2016 & 10 & 3 \\ \hline
+				Mecánica de Medios Continuos & 2do semestre 2016 & 10 & 5 (6?) \\ \hline
+				Computación de Alto Rendimiento en Mecánica Computacional. MPI, PETSc y OpenMP & 2do semestre 2016 & 7 & 3 \\ \hline
+			\end{tabular}
+		\end{center}
+		\subitem \textbf{Número de UVACs acreditados al presente:} 15 
+	
+	
+	\item \textbf{Publicaciones} (publicadas en prensa y/o enviadas) \textbf{y presentaciones en congresos:}
+
+		\begin{itemize}
+			\item BIOCCA, NICOLÁS; QUINTANA, CAMILA; URQUIZA, SANTIAGO A.;  FRONTINI, PATRICA M. Predictive Engineering Tool for injection molded thermoplastic components. XXII Congreso sobre Métodos Numéricos y sus Aplicaciones. Córdoba, Argentina, 2016. 
+			
+			\item VACCARI, ALEJANDRO; GORGA, TOMÁS; GIMENEZ, JULIO; BIOCCA, NICOLÁS; URQUIZA, SANTIAGO A. Modelo Computacional de un Canal de Ensayos Hidrodinámicos. XXII Congreso sobre Métodos Numéricos y sus Aplicaciones. Córdoba, Argentina, 2016.
+			
+		\end{itemize}
+	
+	\item \textbf{Actividades desarrolladas} \par
+		Durante el primer semestre 2016 fueron tomados los cursos "Mecánica del Sólido Computacional" dictado por Dr. Adrián P. Cisilino de la Universidad Nacional de Mar del Plata, Facultad de Ingeniería y "Formulaciones Variacionales Avanzadas en el Modelado de Medios Continuos" a cargo del Dr. Pablo J. Blanco, profesor del Laboratório Nacional de Computação Científica (LNCC), Petrópolis. En paralelo se tomaron seminarios privados por parte de mi director Santiago Urquiza sobre Álgebra Tensorial, Mecánica de Medios Continuos y Métodos Numéricos, con el objetivos de reforzar y mejorar el dominio de dichos tópicos.
+		% SE PUEDE AGREGAR QUE SE HIZO ESPECIAL ENFASIS EN EL PROBLEMA DE GRANDES DE DEFORMACIONES
+		% SE PUEDE AGREGAR """""" EN EL METODO DE ELEMENTOS FINITOS
+		% AGREGAR CURSO REALIZADO CON PABLO EN EL 1ER SEMESTRE 2016
+		A lo largo de todo el periodo anual 2016 fueron dadas instrucciones acerca del uso y diseño de software creado por mi director, de propósito genérico y ampliamente utilizado por el grupo de trabajo. Adicionalmente, fue desarrollada una librería numérica en el contexto de seguimiento de interfaces en problemas 2d y 3d. Por otro lado se desarrollaron aplicativos para el post-procesamiento de resultados en Paraview, en el contexto soluciones por el Método de Elementos Finitos. \par
+		Durante el segundo semestre de 2016 se trabajó en la publicación "Modelo Computacional de un Canal de Ensayos Hidrodinámicos" y "Predictive Engineering Tool for injection molded thermoplastic components" junto a sus respectivos autores, para ser presentados en el congreso ENIEF 2016. Durante el mismo semestre fueron tomados los cursos "Mecánica de Medios Continuos" dictado por el Dr. Enrique Pardo de la Universidad Nacional de Mar del Plata, Facultad de Ingeniería y "Computación de Alto Rendimiento en Mecánica Computacional. MPI, PETSc y OpenMP" a cargo del Dr. Mario Storti, profesor del Centro de Investigación de Métodos Computacionales (CIMEC) de la Universidad Nacional del Litoral (UNL), Santa Fe.
+	
+	\item \textbf{Dificultades encontradas en el avance del trabajo de tesis}
+	
+	\item \textbf{Resumen de las actividades a desarrollar en el próximo período}
+	
+	\item \textbf{Modificaciones al plan original de tesis} (si corresponde) \par
+		No corresponde
+	
+	\item \textbf{Respuesta a las recomendaciones realizadas en el informe anterior} (si corresponde) \par
+		No corresponde
+	
+	\clearpage
+
+	\item \textbf{Aval del director/co-director de tesis}
+	
+	\vspace{2cm}
+	\hbox to \hsize{\quad\sig{Dr. Santiago A. Urquiza}\hfil\sig{Dr. Guillermo Lombera}\quad}
+	\vspace{2cm}
+	
+	\item \textbf{Recomendaciones y aval de la comisión de seguimiento} (informe satisfactorio / no-satisfactorio)
+%	\vfill
+	\vspace{2cm}
+	
+	\hbox to \hsize{\quad\sig{Dr. Diego Santiago}\hfill\sig{Dr. Pablo J. Blanco}\hfill\sig{Dr. Alejandro Clausse }\quad}
+		
+\end{itemize}
+
+	
+	
+
+
+\end{document}
